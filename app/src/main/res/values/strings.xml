@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Jeux de Nim</string>
+    <string name="Play_Game">Play</string>
+    <string name="unavailable">Unavailable</string>
+    <string name="work_in_progress">Work in progress</string>
+    <string name="title_activity_main2">MainActivity</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="title_turn">Au tour du joueur</string>
+</resources>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    tools:context=".activity.MainActivity"
+    android:orientation="vertical"
+    android:layout_margin="20dp">
+
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/Layout_menu"
+    android:orientation="vertical"
+    android:layout_weight="0">
+    <ImageView
+        android:id="@+id/Nim_image"
+        android:layout_width="300dp"
+        android:layout_height="200dp"
+        android:background="@drawable/jeunim"
+        android:layout_below="@+id/Welcome_text"
+        android:layout_marginTop="15dp"
+        android:layout_centerHorizontal="true">
+
+    </ImageView>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/Welcome_text"
+        android:layout_marginTop="10dp"
+        android:layout_centerHorizontal="true"
+        android:text="Welcome to"
+        android:textSize="50sp"
+        android:textColor="@color/black"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/Welcome_text2"
+        android:layout_centerHorizontal="true"
+        android:text="Nim games"
+        android:textSize="50sp"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/black"
+        android:layout_below="@+id/Nim_image"
+        android:fontFamily="cursive"
+        />
+</RelativeLayout>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Play_Game"
+        android:id="@+id/Play"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="15dp"
+        android:textSize="30sp"
+        />
+
+</LinearLayout>

@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.Pebble1Activity"
+    android:layout_margin="20dp"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="Au tour du joueur bleu"
+        android:id="@+id/whosplayin"
+        android:textSize="30sp"/>
+
+
+    <RelativeLayout
+        android:layout_below="@id/whosplayin"
+        android:id="@+id/pebble_line1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        >
+
+        <ImageView
+            android:layout_width="@dimen/pebble_size"
+            android:layout_height="@dimen/pebble_size"
+            android:layout_margin="10dp"
+            android:src="@drawable/empty_pebble"
+            android:id="@+id/pebble_line1_1"
+            >
+
+        </ImageView>
+
+        <ImageView
+            android:layout_width="@dimen/pebble_size"
+            android:layout_height="@dimen/pebble_size"
+            android:layout_margin="10dp"
+            android:src="@drawable/empty_pebble"
+            android:id="@+id/pebble_line1_2"
+            android:layout_toRightOf="@+id/pebble_line1_1">
+
+        </ImageView>
+
+        <ImageView
+            android:layout_width="@dimen/pebble_size"
+            android:layout_height="@dimen/pebble_size"
+            android:layout_margin="10dp"
+            android:src="@drawable/empty_pebble"
+            android:layout_toRightOf="@+id/pebble_line1_2"
+            android:id="@+id/pebble_line1_3">
+
+        </ImageView>
+
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/pebble_line2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/pebble_line1"
+        >
+
+        <ImageView
+            android:layout_width="@dimen/pebble_size"
+            android:layout_height="@dimen/pebble_size"
+            android:layout_margin="10dp"
+            android:src="@drawable/empty_pebble"
+            android:id="@+id/pebble_line2_1">
+
+        </ImageView>
+
+        <ImageView
+            android:layout_width="@dimen/pebble_size"
+            android:layout_height="@dimen/pebble_size"
+            android:layout_margin="10dp"
+            android:src="@drawable/empty_pebble"
+            android:layout_toRightOf="@+id/pebble_line2_1"
+            android:id="@+id/pebble_line2_2">
+        </ImageView>
+
+        <ImageView
+            android:layout_width="@dimen/pebble_size"
+            android:layout_height="@dimen/pebble_size"
+            android:layout_margin="10dp"
+            android:src="@drawable/empty_pebble"
+            android:layout_toRightOf="@+id/pebble_line2_2"
+            android:id="@+id/pebble_line2_3">
+        </ImageView>
+        <ImageView
+            android:layout_width="@dimen/pebble_size"
+            android:layout_height="@dimen/pebble_size"
+            android:layout_margin="10dp"
+            android:src="@drawable/empty_pebble"
+            android:layout_toRightOf="@+id/pebble_line2_3"
+            android:id="@+id/pebble_line2_4">
+        </ImageView>
+
+        <ImageView
+            android:layout_width="@dimen/pebble_size"
+            android:layout_height="@dimen/pebble_size"
+            android:layout_margin="10dp"
+            android:src="@drawable/empty_pebble"
+            android:layout_toRightOf="@+id/pebble_line2_4"
+            android:id="@+id/pebble_line2_5">
+        </ImageView>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/pebble_line3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/pebble_line2"
+        >
+
+        <ImageView
+            android:layout_width="@dimen/pebble_size"
+            android:layout_height="@dimen/pebble_size"
+            android:layout_margin="10dp"
+            android:src="@drawable/empty_pebble"
+            android:id="@+id/pebble_line3_1">
+
+        </ImageView>
+
+        <ImageView
+            android:layout_width="@dimen/pebble_size"
+            android:layout_height="@dimen/pebble_size"
+            android:layout_margin="10dp"
+            android:src="@drawable/empty_pebble"
+            android:layout_toRightOf="@+id/pebble_line3_1"
+            android:id="@+id/pebble_line3_2">
+        </ImageView>
+
+        <ImageView
+            android:layout_width="@dimen/pebble_size"
+            android:layout_height="@dimen/pebble_size"
+            android:layout_margin="10dp"
+            android:src="@drawable/empty_pebble"
+            android:layout_toRightOf="@+id/pebble_line3_2"
+            android:id="@+id/pebble_line3_3">
+        </ImageView>
+        <ImageView
+            android:layout_width="@dimen/pebble_size"
+            android:layout_height="@dimen/pebble_size"
+            android:layout_margin="10dp"
+            android:src="@drawable/empty_pebble"
+            android:layout_toRightOf="@+id/pebble_line3_3"
+            android:id="@+id/pebble_line3_4">
+        </ImageView>
+
+        <ImageView
+            android:layout_width="@dimen/pebble_size"
+            android:layout_height="@dimen/pebble_size"
+            android:layout_margin="10dp"
+            android:src="@drawable/empty_pebble"
+            android:layout_toRightOf="@+id/pebble_line3_4"
+            android:id="@+id/pebble_line3_5">
+        </ImageView>
+        <ImageView
+            android:layout_width="@dimen/pebble_size"
+            android:layout_height="@dimen/pebble_size"
+            android:layout_margin="10dp"
+            android:src="@drawable/empty_pebble"
+            android:layout_toRightOf="@+id/pebble_line3_5"
+            android:id="@+id/pebble_line3_6">
+        </ImageView>
+
+        <ImageView
+            android:layout_width="@dimen/pebble_size"
+            android:layout_height="@dimen/pebble_size"
+            android:layout_margin="10dp"
+            android:src="@drawable/empty_pebble"
+            android:layout_toRightOf="@+id/pebble_line3_6"
+            android:id="@+id/pebble_line3_7">
+        </ImageView>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@+id/pebble_line3"
+        android:layout_centerHorizontal="true">
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="UNDO"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="50dp"
+            android:id="@+id/undo"
+            android:visibility="invisible"
+            android:layout_weight="1"
+            android:layout_marginRight="15dp"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="confirm"
+        android:clickable="false"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:id="@+id/confirm"
+        android:layout_weight="1"/>
+
+        <!-- android:visibility="invisible"-->
+    </LinearLayout>
+
+</RelativeLayout>

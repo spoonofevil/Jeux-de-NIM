@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center_horizontal"
+    android:layout_margin="10dp">
+
+    <ImageView
+        android:id="@+id/Game_icon"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/icon_nogame">
+
+    </ImageView>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginStart="5dp">
+
+        <TextView
+            android:id="@+id/Game_Name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/unavailable"
+            android:textColor="@color/black"
+           android:textSize="20sp"
+            android:layout_margin="1dp">
+            <!--android:textAlignment="textEnd"-->
+
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/Description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/Game_Name"
+            android:text="@string/work_in_progress"
+            android:layout_margin="1dp"
+            android:layout_centerHorizontal="true">
+            <!--android:textAlignment="textEnd"-->
+
+        </TextView>
+    </RelativeLayout>
+</LinearLayout>
