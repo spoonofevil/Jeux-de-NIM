@@ -188,13 +188,7 @@ public class Pebble1Activity extends AppCompatActivity {
                         }
                     }
                 }
-                player = !player;
-                if (player){
-                    colorplayer = "bleu";
-                }else{
-                    colorplayer = "rouge";
-                }
-                admin.setText("Au tour du joueur " + colorplayer);
+
                 tour++;
                 confirm.setClickable(false);
                 if(victory){
@@ -219,7 +213,16 @@ public class Pebble1Activity extends AppCompatActivity {
                         }
                     });
                     popupvictory.show();
+                }else{
+                    player = !player;
+                    if (player){
+                        colorplayer = "bleu";
+                    }else{
+                        colorplayer = "rouge";
+                    }
+                    admin.setText("Au tour du joueur " + colorplayer);
                 }
+
             }
         });
         undo.setOnClickListener(new View.OnClickListener() {

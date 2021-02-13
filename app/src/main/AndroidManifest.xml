@@ -9,10 +9,10 @@
         android:roundIcon="@drawable/nimesroundicon"
         android:supportsRtl="true"
         android:theme="@style/Theme.JeuxDeNim">
-        <activity android:name=".activity.Pebble1Activity"
-            android:screenOrientation="portrait">
-
-        </activity>
+        <activity android:name=".activity.Pebble1bot"></activity>
+        <activity
+            android:name=".activity.Pebble1Activity"
+            android:screenOrientation="portrait"></activity>
         <activity android:name=".activity.GameListActivity" />
         <activity android:name=".activity.MainActivity">
             <intent-filter>
