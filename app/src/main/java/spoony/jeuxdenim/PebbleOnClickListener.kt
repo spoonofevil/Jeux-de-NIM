@@ -32,6 +32,7 @@ class PebbleOnClickListener(
             }
             else -> Toast.makeText(context, "C PASENS2 ARRIVER TT CA", Toast.LENGTH_SHORT).show()
         }
+        print("les lignes "+L1+L2+" ont etait desactivées")
         for (pebleIMG in pebblesimg[L1 - 1]) {
             pebleIMG.isClickable = false
         }
@@ -58,8 +59,7 @@ class PebbleOnClickListener(
             }
             else -> Toast.makeText(context, "C PASENS2 ARRIVER TT CA", Toast.LENGTH_SHORT).show()
         }
-
-
+        print("les lignes "+L1+L2+" ont etait activées")
         for (Pebblenow in pebblesnow[L1]) {
             if (Pebblenow.color == "blank")
                 pebblesimg[Pebblenow.ligne - 1][Pebblenow.num - 1].isClickable = true

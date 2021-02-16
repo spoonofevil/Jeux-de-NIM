@@ -442,15 +442,15 @@ public class Pebble1bot extends AppCompatActivity {
         } else {
             nbEnlever = r.nextInt(2) + 1;
         }
-        System.out.println(nbEnlever);
+        System.out.println(nbEnlever+" a enlever");
         System.out.println("grp1 " + nbgrp1 + " grp2 " + nbgrp2 + " grp4 " + nbgrp4);
         System.out.println("L1 " + nbL1 + " L2 " + nbL2 + " L3 " + nbL3);
 //        Toast.makeText(activity_pebble, nbEnlever, Toast.LENGTH_SHORT).show();
         if (nbL1 == 0 && nbL2 == 0) {
-            ligne=3;
-            while (nbEnlever > 0 & num < 3) {
+            ligne=2;
+            while (nbEnlever > 0 & num < 7) {
                 if (pebbles[ligne][num].getColor().equals("blank")) {
-                    System.out.println("le bot enleve la pebble de ligne " + ligne + " et de num " + num);
+                    //System.out.println("le bot enleve la pebble de ligne " + ligne + " et de num " + num);
                     pebblesimg[ligne][num].setImageResource(R.drawable.red_pebble);
                     pebblesimg[ligne][num].setClickable(false);
                     pebbles[ligne][num].setColor("r");
@@ -461,10 +461,10 @@ public class Pebble1bot extends AppCompatActivity {
             }
             pas_possible=false;
         }else if (nbL1 == 0 && nbL3 == 0){
-            ligne=2;
-            while (nbEnlever > 0 & num < 3) {
+            ligne=1;
+            while (nbEnlever > 0 & num < 5) {
                 if (pebbles[ligne][num].getColor().equals("blank")) {
-                    System.out.println("le bot enleve la pebble de ligne " + ligne + " et de num " + num);
+                    //System.out.println("le bot enleve la pebble de ligne " + ligne + " et de num " + num);
                     pebblesimg[ligne][num].setImageResource(R.drawable.red_pebble);
                     pebblesimg[ligne][num].setClickable(false);
                     pebbles[ligne][num].setColor("r");
@@ -475,10 +475,10 @@ public class Pebble1bot extends AppCompatActivity {
             }
             pas_possible=false;
         }else if (nbL2 == 0 && nbL3 == 0){
-            ligne=1;
+            ligne=0;
             while (nbEnlever > 0 & num < 3) {
                 if (pebbles[ligne][num].getColor().equals("blank")) {
-                    System.out.println("le bot enleve la pebble de ligne " + ligne + " et de num " + num);
+                    //System.out.println("le bot enleve la pebble de ligne " + ligne + " et de num " + num);
                     pebblesimg[ligne][num].setImageResource(R.drawable.red_pebble);
                     pebblesimg[ligne][num].setClickable(false);
                     pebbles[ligne][num].setColor("r");
@@ -488,12 +488,55 @@ public class Pebble1bot extends AppCompatActivity {
                 }
             }
             pas_possible=false;
-        } else{
-
+        } else if((nbL1==2 && nbL2==1) ||(nbL1==2 && nbL3==1)){
+            ligne=0;
+            nbEnlever=1;
+            while (nbEnlever > 0 & num < 3) {
+                if (pebbles[ligne][num].getColor().equals("blank")) {
+                    //System.out.println("le bot enleve la pebble de ligne " + ligne + " et de num " + num);
+                    pebblesimg[ligne][num].setImageResource(R.drawable.red_pebble);
+                    pebblesimg[ligne][num].setClickable(false);
+                    pebbles[ligne][num].setColor("r");
+                    nbEnlever--;
+                } else {
+                    num++;
+                }
+            }
+            pas_possible=false;
+        }else if((nbL2==2 && nbL1==1) ||(nbL2==2 && nbL3==1)){
+            ligne=1;
+            nbEnlever=1;
+            while (nbEnlever > 0 & num < 5) {
+                if (pebbles[ligne][num].getColor().equals("blank")) {
+                    //System.out.println("le bot enleve la pebble de ligne " + ligne + " et de num " + num);
+                    pebblesimg[ligne][num].setImageResource(R.drawable.red_pebble);
+                    pebblesimg[ligne][num].setClickable(false);
+                    pebbles[ligne][num].setColor("r");
+                    nbEnlever--;
+                } else {
+                    num++;
+                }
+            }
+            pas_possible=false;
+        }else if((nbL3==2 && nbL2==1) || (nbL3==2 && nbL1==1)){
+            ligne=2;
+            nbEnlever=1;
+            while (nbEnlever > 0 & num < 7) {
+                if (pebbles[ligne][num].getColor().equals("blank")) {
+                    //System.out.println("le bot enleve la pebble de ligne " + ligne + " et de num " + num);
+                    pebblesimg[ligne][num].setImageResource(R.drawable.red_pebble);
+                    pebblesimg[ligne][num].setClickable(false);
+                    pebbles[ligne][num].setColor("r");
+                    nbEnlever--;
+                } else {
+                    num++;
+                }
+            }
+            pas_possible=false;
         }
 
         while (pas_possible) {
-                System.out.println("test");
+            //System.out.println("test");
                 if (tourtest < 10) {
                     ligne = r.nextInt(3);
                     switch (ligne) {
@@ -501,7 +544,7 @@ public class Pebble1bot extends AppCompatActivity {
                             if (nbL1 >= nbEnlever) {
                                 while (nbEnlever > 0 & num < 3) {
                                     if (pebbles[ligne][num].getColor().equals("blank")) {
-                                        System.out.println("le bot enleve la pebble de ligne " + ligne + " et de num " + num);
+                                        //System.out.println("le bot enleve la pebble de ligne " + ligne + " et de num " + num);
                                         pebblesimg[ligne][num].setImageResource(R.drawable.red_pebble);
                                         pebblesimg[ligne][num].setClickable(false);
                                         pebbles[ligne][num].setColor("r");
@@ -520,7 +563,7 @@ public class Pebble1bot extends AppCompatActivity {
                             if (nbL2 >= nbEnlever) {
                                 while (nbEnlever > 0 & num < 5) {
                                     if (pebbles[ligne][num].getColor().equals("blank")) {
-                                        System.out.println("le bot enleve la pebble de ligne " + ligne + " et de num " + num);
+                                        //System.out.println("le bot enleve la pebble de ligne " + ligne + " et de num " + num);
                                         pebblesimg[ligne][num].setImageResource(R.drawable.red_pebble);
                                         pebblesimg[ligne][num].setClickable(false);
                                         pebbles[ligne][num].setColor("r");
@@ -565,25 +608,34 @@ public class Pebble1bot extends AppCompatActivity {
                 }
                 tourtest++;
             }
+victory=true;
 
+        System.out.println("tour numero "+tour);
         for (Pebble[] pebbltemp : pebbles) {
+            //System.out.println("");
             for (Pebble peble : pebbltemp) {
                 if (peble.getColor().equals("blank")) {
                     pebblesimg[peble.getLigne() - 1][peble.getNum() - 1].setClickable(true);
                     victory = false;
+                    //System.out.print(" blank ");
+                    //System.out.println("il manque la pebble de la ligne "+peble.getLigne()+" et de num "+peble.getNum());
                     //Toast.makeText(Pebble1Activity.this, "oh le nul", Toast.LENGTH_SHORT).show();
                 }
             }
+            //System.out.println("");
         }
 
         saveboard.add(getPebblesCopy());
         for (Pebble[] pebbltemp : saveboard.get(tour)) {
+            //System.out.println("");
             for (Pebble peble : pebbltemp) {
                 ImageView pebbleimg = pebblesimg[peble.getLigne() - 1][peble.getNum() - 1];
                 if (!peble.getColor().equals("blank")) {
                     pebbleimg.setClickable(false);
+                    //System.out.print(" "+peble.getColor()+" ");
                 }
             }
+            //System.out.println("");
         }
 
         tour++;

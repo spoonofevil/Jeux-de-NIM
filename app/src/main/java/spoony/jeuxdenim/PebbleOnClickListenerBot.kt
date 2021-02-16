@@ -74,7 +74,7 @@ class PebbleOnClickListenerBot(
     }
 
     override fun onClick(v: View) {
-        val tour = Pebble1Activity.tour
+        val tour = Pebble1bot.tour
         val savem = context.saveboard.get(tour)
         var avant = true;
         when (peble.color) {
@@ -93,12 +93,16 @@ class PebbleOnClickListenerBot(
             "b" -> if (context.player) {
                 (v as ImageView).setImageResource(R.drawable.empty_pebble)
                 peble.color = "blank"
+               // println("tour numero " + tour)
                 for (pebbltemp in context.pebbles) {
+                    println("")
                     for (pebblenow in pebbltemp) {
                         if (pebblenow.color != savem[pebblenow.ligne - 1][pebblenow.num - 1].color) {
                             avant = false;
                         }
+                        //print(" " + pebblenow.color + "/" + savem[pebblenow.ligne - 1][pebblenow.num - 1].color + " ")
                     }
+                   // println("")
                 }
                 if (avant) {
                     context.confirm.isClickable = false;
@@ -110,27 +114,7 @@ class PebbleOnClickListenerBot(
             } else {
                 Toast.makeText(context, "Stop trying to cheat", Toast.LENGTH_SHORT).show()
             }
-            "r" -> if (!context.player) {
-                (v as ImageView).setImageResource(R.drawable.empty_pebble)
-                peble.color = "blank"
-                for (pebbltemp in context.pebbles) {
-                    for (pebblenow in pebbltemp) {
-                        if (pebblenow.color != savem[pebblenow.ligne - 1][pebblenow.num - 1].color) {
-                            avant = false;
-                        }
-                    }
-                }
-                if (avant) {
-                    context.confirm.isClickable = false;
-                    lignenonclickable(peble.ligne, pebblesimg, context.pebbles)
-                } else {
-                    context.confirm.isClickable = true
-                }
-            } else {
-                Toast.makeText(context, "Stop trying to cheat", Toast.LENGTH_SHORT).show()
-            }
-            else -> Toast.makeText(context, "OULALAAAAA C PAS SENSE SE PASSER COMME CA : " + peble.color, Toast.LENGTH_LONG).show()
+            "r" -> Toast.makeText(context, "Stop trying to cheat", Toast.LENGTH_SHORT).show()
         }
-
     }
 }
