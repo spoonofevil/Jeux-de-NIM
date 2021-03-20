@@ -16,9 +16,11 @@ import androidx.appcompat.app.AlertDialog;
 
 import java.util.List;
 
+import spoony.jeuxdenim.activity.TimberActivity;
 import spoony.jeuxdenim.activity.MainActivity;
 import spoony.jeuxdenim.activity.Pebble1Activity;
 import spoony.jeuxdenim.activity.Pebble1bot;
+import spoony.jeuxdenim.activity.TimberActivity;
 
 public class GameAdapter extends BaseAdapter {
 
@@ -90,6 +92,23 @@ public class GameAdapter extends BaseAdapter {
                                Intent Menu = new Intent(context, Pebble1bot.class);
                                context.startActivity(Menu);
                                ((Activity) context).finish();
+                           }
+                       });
+                       popupgame.show();
+                       break;
+                   case "timber":
+                       popupgame.setPositiveButton("Another human", new DialogInterface.OnClickListener() {
+                           @Override
+                           public void onClick(DialogInterface dialog, int which) {
+                               Intent new_Timber_game = new Intent(context, TimberActivity.class);
+                               context.startActivity(new_Timber_game);
+                               ((Activity) context).finish();
+                           }
+                       });
+                       popupgame.setNegativeButton("The BOT", new DialogInterface.OnClickListener() {
+                           @Override
+                           public void onClick(DialogInterface dialog, int which) {
+                               Toast.makeText(context, "Sorry this game is not Available yet", Toast.LENGTH_SHORT).show();
                            }
                        });
                        popupgame.show();

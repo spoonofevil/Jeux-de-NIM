@@ -39,7 +39,7 @@ public class GameListActivity extends AppCompatActivity {
 
         List<Game_item> listofgame = new ArrayList<>();
         listofgame.add(new Game_item("First pebble", "pebblegame","Take pebbles and try to be the one to take the last pebble"));
-        listofgame.add(new Game_item("Unavailable", "nogame" ,"Work_in_progress"));
+        listofgame.add(new Game_item("Timber", "timber" ,"Make dominoes fall on one side be the last to push a domino"));
         listofgame.add(new Game_item("Unavailable","nogame" ,"Work_in_progress"));
 
         ListView GameListview = findViewById(R.id.Game_List);
